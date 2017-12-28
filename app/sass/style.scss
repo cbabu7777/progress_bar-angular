@@ -1,0 +1,113 @@
+@import 'shared/mixins',
+'shared/reset',
+'shared/about-light';
+
+/* 
+* Copyright (c) 2012-2013 Thibaut Courouble
+* http://www.cssflow.com
+*
+* Licensed under the MIT License:
+* http://www.opensource.org/licenses/mit-license.php
+*/
+
+body {
+color: #404040;
+background: #2a2a2a url('../img/bg.png') 0 0 repeat;
+font-family: Verdana, Geneva, sans-serif;
+}
+
+.container {
+margin: 80px auto;
+text-align: center;
+.box{
+    margin-bottom:20px;
+.progress-outer {
+margin: 0 auto;
+overflow: hidden;
+}
+p{
+    color:#7b7b7b;
+    font-size:16px;
+    margin-top:10px;
+}
+}
+.form-control {
+    height: 28px;
+    padding: 2px 12px;
+    margin-bottom: 20px;
+}
+.btn-primary:first-child{
+     margin-left:0;
+    }
+.btn-primary {
+    background-color: #fff;
+    color:#106907;
+    font-weight:bold;
+    border-color: transparent;
+    padding: 3px 12px;
+    width: 23.5%;
+    margin-left: 2%;
+    :focus,:hover{
+        background-color: #106907;
+    }
+}
+h1 {
+    color:#fff;
+    margin-bottom:50px;
+    font-size:36px;
+}
+}
+
+.progress-outer {
+padding: 4px;
+background: rgba(black, .25);
+border-radius: 6px;
+@include box-shadow(inset 0 1px 2px rgba(black, .25),
+              0 1px rgba(white, .08));
+}
+.progress-bar-inner.red {
+    background-color: #da1a0c; 
+    width:100% !important;
+}
+.progress-bar-inner {
+position: relative;
+height: 16px;
+border-radius: 4px;
+background-color: #86e01e;
+@include transition(.4s linear);
+@include transition-property(width, background-color);
+@include box-shadow(0 0 1px 1px rgba(black, .25),
+              inset 0 1px rgba(white, .1));
+
+&:before, &:after {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+}
+
+&:before {
+bottom: 0;
+background: url('../img/stripes.png') 0 0 repeat;
+border-radius: 4px 4px 0 0;
+}
+
+&:after {
+z-index: 2;
+bottom: 45%;
+border-radius: 4px;
+@include linear-gradient(top, rgba(white, .3), rgba(white, .05));
+}
+}
+
+/*
+* Note: using adjacent or general sibling selectors combined with
+*       pseudo classes doesn't work in Safari 5.0 and Chrome 12.
+*       See this article for more info and a potential fix:
+*       http://css-tricks.com/webkit-sibling-bug/
+*/
+
+
+
+

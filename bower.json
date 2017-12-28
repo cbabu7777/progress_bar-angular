@@ -1,0 +1,20 @@
+{
+  "name": "progressbar",
+  "authors": [
+    "babu <cbabu7777@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.8"
+  }
+}
